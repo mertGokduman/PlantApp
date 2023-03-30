@@ -21,6 +21,19 @@
 		B48375B029D5B6F000451787 /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375AF29D5B6F000451787 /* UICollectionView + Extension.swift */; };
 		B48375B229D5B91100451787 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375B129D5B91100451787 /* OnboardingViewController.swift */; };
 		B48375B429D5B92900451787 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375B329D5B92900451787 /* HomeViewController.swift */; };
+		B48375C529D5BA8500451787 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375B729D5BA8500451787 /* Rubik-Light.ttf */; };
+		B48375C729D5BA8500451787 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375B929D5BA8500451787 /* Rubik-Medium.ttf */; };
+		B48375C829D5BA8500451787 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375BA29D5BA8500451787 /* Rubik-ExtraBold.ttf */; };
+		B48375C929D5BA8500451787 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375BB29D5BA8500451787 /* Rubik-SemiBold.ttf */; };
+		B48375CA29D5BA8500451787 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375BC29D5BA8500451787 /* Rubik-Black.ttf */; };
+		B48375CC29D5BA8500451787 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375BE29D5BA8500451787 /* Rubik-Regular.ttf */; };
+		B48375CF29D5BA8500451787 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48375C129D5BA8500451787 /* Rubik-Bold.ttf */; };
+		B48375D329D5BD0D00451787 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375D229D5BD0D00451787 /* UIFont + Extension.swift */; };
+		B48375D629D5BD6E00451787 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375D529D5BD6E00451787 /* AppConstants.swift */; };
+		B48375D829D5BD8200451787 /* FontBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375D729D5BD8200451787 /* FontBook.swift */; };
+		B48375DA29D5BE8400451787 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375D929D5BE8400451787 /* UIColor + Extension.swift */; };
+		B48375DC29D5BF1800451787 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375DB29D5BF1800451787 /* CustomColors.swift */; };
+		B48375DE29D5C47600451787 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375DD29D5C47600451787 /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +53,19 @@
 		B48375AF29D5B6F000451787 /* UICollectionView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extension.swift"; sourceTree = "<group>"; };
 		B48375B129D5B91100451787 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B48375B329D5B92900451787 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B48375B729D5BA8500451787 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		B48375B929D5BA8500451787 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		B48375BA29D5BA8500451787 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B48375BB29D5BA8500451787 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		B48375BC29D5BA8500451787 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		B48375BE29D5BA8500451787 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		B48375C129D5BA8500451787 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		B48375D229D5BD0D00451787 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		B48375D529D5BD6E00451787 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		B48375D729D5BD8200451787 /* FontBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBook.swift; sourceTree = "<group>"; };
+		B48375D929D5BE8400451787 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		B48375DB29D5BF1800451787 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		B48375DD29D5C47600451787 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +131,7 @@
 		B483759929D5B05900451787 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B48375D429D5BD6200451787 /* Constants */,
 				B48375A829D5B65600451787 /* Helpers */,
 				B48375A729D5B65000451787 /* Extensions */,
 			);
@@ -114,6 +141,7 @@
 		B483759A29D5B06F00451787 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B48375B529D5BA6100451787 /* Fonts */,
 				B483758C29D5AEE800451787 /* Assets.xcassets */,
 				B483758E29D5AEE800451787 /* LaunchScreen.storyboard */,
 			);
@@ -158,6 +186,9 @@
 			children = (
 				B48375AB29D5B68700451787 /* UIViewController+Extensions.swift */,
 				B48375AF29D5B6F000451787 /* UICollectionView + Extension.swift */,
+				B48375D229D5BD0D00451787 /* UIFont + Extension.swift */,
+				B48375D929D5BE8400451787 /* UIColor + Extension.swift */,
+				B48375DD29D5C47600451787 /* String + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,6 +200,30 @@
 				B48375AD29D5B6D400451787 /* ReusableView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B48375B529D5BA6100451787 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B48375BC29D5BA8500451787 /* Rubik-Black.ttf */,
+				B48375C129D5BA8500451787 /* Rubik-Bold.ttf */,
+				B48375BA29D5BA8500451787 /* Rubik-ExtraBold.ttf */,
+				B48375B729D5BA8500451787 /* Rubik-Light.ttf */,
+				B48375B929D5BA8500451787 /* Rubik-Medium.ttf */,
+				B48375BE29D5BA8500451787 /* Rubik-Regular.ttf */,
+				B48375BB29D5BA8500451787 /* Rubik-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B48375D429D5BD6200451787 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B48375D529D5BD6E00451787 /* AppConstants.swift */,
+				B48375D729D5BD8200451787 /* FontBook.swift */,
+				B48375DB29D5BF1800451787 /* CustomColors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B483759029D5AEE800451787 /* LaunchScreen.storyboard in Resources */,
+				B48375C529D5BA8500451787 /* Rubik-Light.ttf in Resources */,
+				B48375C729D5BA8500451787 /* Rubik-Medium.ttf in Resources */,
+				B48375C829D5BA8500451787 /* Rubik-ExtraBold.ttf in Resources */,
+				B48375CC29D5BA8500451787 /* Rubik-Regular.ttf in Resources */,
+				B48375CA29D5BA8500451787 /* Rubik-Black.ttf in Resources */,
 				B483758D29D5AEE800451787 /* Assets.xcassets in Resources */,
+				B48375CF29D5BA8500451787 /* Rubik-Bold.ttf in Resources */,
+				B48375C929D5BA8500451787 /* Rubik-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,13 +308,19 @@
 				B483759F29D5B0EB00451787 /* BaseViewModel.swift in Sources */,
 				B483758429D5AEE800451787 /* AppDelegate.swift in Sources */,
 				B48375A629D5B63B00451787 /* NetworkManager.swift in Sources */,
+				B48375D329D5BD0D00451787 /* UIFont + Extension.swift in Sources */,
 				B48375AC29D5B68700451787 /* UIViewController+Extensions.swift in Sources */,
 				B48375A429D5B40A00451787 /* GetStartedViewController.swift in Sources */,
 				B483758629D5AEE800451787 /* SceneDelegate.swift in Sources */,
+				B48375DC29D5BF1800451787 /* CustomColors.swift in Sources */,
+				B48375DA29D5BE8400451787 /* UIColor + Extension.swift in Sources */,
 				B483759D29D5B0E100451787 /* BaseVC.swift in Sources */,
 				B48375B229D5B91100451787 /* OnboardingViewController.swift in Sources */,
+				B48375D629D5BD6E00451787 /* AppConstants.swift in Sources */,
+				B48375DE29D5C47600451787 /* String + Extension.swift in Sources */,
 				B48375AA29D5B65F00451787 /* SafeUnwrap.swift in Sources */,
 				B48375B429D5B92900451787 /* HomeViewController.swift in Sources */,
+				B48375D829D5BD8200451787 /* FontBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
