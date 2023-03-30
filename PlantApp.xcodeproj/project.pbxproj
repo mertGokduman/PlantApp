@@ -113,7 +113,7 @@
 				B483758329D5AEE800451787 /* AppDelegate.swift */,
 				B483758529D5AEE800451787 /* SceneDelegate.swift */,
 				B483759B29D5B09200451787 /* Base */,
-				B48375A229D5B23900451787 /* GetStarted */,
+				B48375DF29D5DA4B00451787 /* GetStarted */,
 				B48375A029D5B11C00451787 /* Onboarding */,
 				B48375A129D5B14D00451787 /* Home */,
 			);
@@ -173,14 +173,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B48375A229D5B23900451787 /* GetStarted */ = {
-			isa = PBXGroup;
-			children = (
-				B48375A329D5B40A00451787 /* GetStartedViewController.swift */,
-			);
-			name = GetStarted;
-			sourceTree = "<group>";
-		};
 		B48375A729D5B65000451787 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +216,14 @@
 				B48375DB29D5BF1800451787 /* CustomColors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B48375DF29D5DA4B00451787 /* GetStarted */ = {
+			isa = PBXGroup;
+			children = (
+				B48375A329D5B40A00451787 /* GetStartedViewController.swift */,
+			);
+			path = GetStarted;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
