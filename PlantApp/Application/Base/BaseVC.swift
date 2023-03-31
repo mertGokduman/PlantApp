@@ -14,5 +14,6 @@ class BaseVC<VM>: UIViewController where VM: BaseViewModel {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.createBlurBackgroundView(color: .white)
     }
 }

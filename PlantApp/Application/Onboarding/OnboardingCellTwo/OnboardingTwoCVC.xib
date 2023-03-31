@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-SemiBold.ttf">
+            <string>Rubik-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnboardingTwoCVC" customModule="PlantApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get plant care guides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fq-yy-r5D">
+                        <rect key="frame" x="24" y="0.0" width="327" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="kxi-7f-d4M"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="28"/>
+                        <color key="textColor" red="0.074509803920000006" green="0.13725490200000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardTwo" translatesAutoresizingMaskIntoConstraints="NO" id="QHv-Tf-SDj">
+                        <rect key="frame" x="0.0" y="23" width="385" height="635"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="QHv-Tf-SDj" secondAttribute="height" multiplier="77:127" id="D6o-uC-Wz3"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artwork" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-yK-wF1">
+                        <rect key="frame" x="0.0" y="53" width="395" height="270"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6h7-yK-wF1" secondAttribute="height" multiplier="79:54" id="42T-3r-jP1"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brush" translatesAutoresizingMaskIntoConstraints="NO" id="HAc-Xz-7SQ">
+                        <rect key="frame" x="155" y="36" width="150" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="bJ4-Nb-piK"/>
+                            <constraint firstAttribute="width" secondItem="HAc-Xz-7SQ" secondAttribute="height" multiplier="150:12" id="cmm-iK-95S"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ds-l6-57r">
+                        <rect key="frame" x="0.0" y="518" width="375" height="90"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="Azz-Rh-WOg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6h7-yK-wF1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Sd-VJ-PDk"/>
+                <constraint firstItem="2Fq-yy-r5D" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3be-0C-78q"/>
+                <constraint firstAttribute="trailing" secondItem="2Fq-yy-r5D" secondAttribute="trailing" constant="24" id="43p-mf-1J3"/>
+                <constraint firstAttribute="bottom" secondItem="2ds-l6-57r" secondAttribute="bottom" id="5KY-26-g78"/>
+                <constraint firstAttribute="trailing" secondItem="6h7-yK-wF1" secondAttribute="trailing" constant="-20" id="Bdl-QP-WEv"/>
+                <constraint firstItem="2ds-l6-57r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KU0-6P-p8L"/>
+                <constraint firstItem="QHv-Tf-SDj" firstAttribute="top" secondItem="2Fq-yy-r5D" secondAttribute="bottom" constant="-10" id="Soe-ZD-AWb"/>
+                <constraint firstAttribute="bottom" secondItem="QHv-Tf-SDj" secondAttribute="bottom" constant="-50" id="T0D-LO-3qF"/>
+                <constraint firstItem="QHv-Tf-SDj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="buO-jG-xaf"/>
+                <constraint firstItem="HAc-Xz-7SQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="155" id="c4B-cp-BOz"/>
+                <constraint firstItem="6h7-yK-wF1" firstAttribute="top" secondItem="2Fq-yy-r5D" secondAttribute="bottom" constant="20" id="eu7-lx-39g"/>
+                <constraint firstItem="HAc-Xz-7SQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="36" id="rdW-8e-iG6"/>
+                <constraint firstAttribute="trailing" secondItem="2ds-l6-57r" secondAttribute="trailing" id="wyb-jt-ZA6"/>
+                <constraint firstItem="2Fq-yy-r5D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="yDH-gm-mVL"/>
+                <constraint firstAttribute="trailing" secondItem="QHv-Tf-SDj" secondAttribute="trailing" constant="-10" id="z3B-ko-Mid"/>
+            </constraints>
+            <connections>
+                <outlet property="lblTitle" destination="2Fq-yy-r5D" id="iwR-hc-KO4"/>
+                <outlet property="overlayView" destination="2ds-l6-57r" id="vKW-ks-8iU"/>
+            </connections>
+            <point key="canvasLocation" x="-109.16030534351144" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Artwork" width="463" height="270"/>
+        <image name="Brush" width="152" height="13"/>
+        <image name="onboardTwo" width="458.33334350585938" height="633"/>
+    </resources>
+</document>

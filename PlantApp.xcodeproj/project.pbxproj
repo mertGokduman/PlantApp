@@ -34,6 +34,15 @@
 		B48375DA29D5BE8400451787 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375D929D5BE8400451787 /* UIColor + Extension.swift */; };
 		B48375DC29D5BF1800451787 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375DB29D5BF1800451787 /* CustomColors.swift */; };
 		B48375DE29D5C47600451787 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375DD29D5C47600451787 /* String + Extension.swift */; };
+		B48375E329D5DF9F00451787 /* OnboardingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375E129D5DF9F00451787 /* OnboardingCVC.swift */; };
+		B48375E429D5DF9F00451787 /* OnboardingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48375E229D5DF9F00451787 /* OnboardingCVC.xib */; };
+		B48375EA29D6FEA900451787 /* OnboardingTwoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375E829D6FEA900451787 /* OnboardingTwoCVC.swift */; };
+		B48375EB29D6FEA900451787 /* OnboardingTwoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48375E929D6FEA900451787 /* OnboardingTwoCVC.xib */; };
+		B48375EE29D71AF400451787 /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375ED29D71AF400451787 /* PayWallViewController.swift */; };
+		B48375F129D72BD500451787 /* PayWallPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375F029D72BD500451787 /* PayWallPriceView.swift */; };
+		B48375F529D7308F00451787 /* PayWallCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375F329D7308F00451787 /* PayWallCVC.swift */; };
+		B48375F629D7308F00451787 /* PayWallCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48375F429D7308F00451787 /* PayWallCVC.xib */; };
+		B48375F829D7321700451787 /* UICollectionViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48375F729D7321700451787 /* UICollectionViewCell + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +75,15 @@
 		B48375D929D5BE8400451787 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		B48375DB29D5BF1800451787 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		B48375DD29D5C47600451787 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		B48375E129D5DF9F00451787 /* OnboardingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVC.swift; sourceTree = "<group>"; };
+		B48375E229D5DF9F00451787 /* OnboardingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCVC.xib; sourceTree = "<group>"; };
+		B48375E829D6FEA900451787 /* OnboardingTwoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwoCVC.swift; sourceTree = "<group>"; };
+		B48375E929D6FEA900451787 /* OnboardingTwoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTwoCVC.xib; sourceTree = "<group>"; };
+		B48375ED29D71AF400451787 /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
+		B48375F029D72BD500451787 /* PayWallPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallPriceView.swift; sourceTree = "<group>"; };
+		B48375F329D7308F00451787 /* PayWallCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallCVC.swift; sourceTree = "<group>"; };
+		B48375F429D7308F00451787 /* PayWallCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayWallCVC.xib; sourceTree = "<group>"; };
+		B48375F729D7321700451787 /* UICollectionViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +131,9 @@
 				B483758329D5AEE800451787 /* AppDelegate.swift */,
 				B483758529D5AEE800451787 /* SceneDelegate.swift */,
 				B483759B29D5B09200451787 /* Base */,
-				B48375DF29D5DA4B00451787 /* GetStarted */,
+				B48375DF29D5DA4B00451787 /* Landing */,
 				B48375A029D5B11C00451787 /* Onboarding */,
+				B48375EC29D71ADF00451787 /* PayWall */,
 				B48375A129D5B14D00451787 /* Home */,
 			);
 			path = Application;
@@ -131,6 +150,7 @@
 		B483759929D5B05900451787 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B48375EF29D72BBF00451787 /* CustomViews */,
 				B48375D429D5BD6200451787 /* Constants */,
 				B48375A829D5B65600451787 /* Helpers */,
 				B48375A729D5B65000451787 /* Extensions */,
@@ -160,6 +180,8 @@
 		B48375A029D5B11C00451787 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				B48375E729D6FE7800451787 /* OnboardingCellTwo */,
+				B48375E029D5DF8600451787 /* OnboardingCell */,
 				B48375B129D5B91100451787 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
@@ -181,6 +203,7 @@
 				B48375D229D5BD0D00451787 /* UIFont + Extension.swift */,
 				B48375D929D5BE8400451787 /* UIColor + Extension.swift */,
 				B48375DD29D5C47600451787 /* String + Extension.swift */,
+				B48375F729D7321700451787 /* UICollectionViewCell + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,12 +241,56 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		B48375DF29D5DA4B00451787 /* GetStarted */ = {
+		B48375DF29D5DA4B00451787 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
 				B48375A329D5B40A00451787 /* GetStartedViewController.swift */,
 			);
-			path = GetStarted;
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		B48375E029D5DF8600451787 /* OnboardingCell */ = {
+			isa = PBXGroup;
+			children = (
+				B48375E129D5DF9F00451787 /* OnboardingCVC.swift */,
+				B48375E229D5DF9F00451787 /* OnboardingCVC.xib */,
+			);
+			path = OnboardingCell;
+			sourceTree = "<group>";
+		};
+		B48375E729D6FE7800451787 /* OnboardingCellTwo */ = {
+			isa = PBXGroup;
+			children = (
+				B48375E829D6FEA900451787 /* OnboardingTwoCVC.swift */,
+				B48375E929D6FEA900451787 /* OnboardingTwoCVC.xib */,
+			);
+			path = OnboardingCellTwo;
+			sourceTree = "<group>";
+		};
+		B48375EC29D71ADF00451787 /* PayWall */ = {
+			isa = PBXGroup;
+			children = (
+				B48375F229D7307B00451787 /* PayWallCell */,
+				B48375ED29D71AF400451787 /* PayWallViewController.swift */,
+			);
+			path = PayWall;
+			sourceTree = "<group>";
+		};
+		B48375EF29D72BBF00451787 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B48375F029D72BD500451787 /* PayWallPriceView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B48375F229D7307B00451787 /* PayWallCell */ = {
+			isa = PBXGroup;
+			children = (
+				B48375F329D7308F00451787 /* PayWallCVC.swift */,
+				B48375F429D7308F00451787 /* PayWallCVC.xib */,
+			);
+			path = PayWallCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,11 +355,14 @@
 				B48375C529D5BA8500451787 /* Rubik-Light.ttf in Resources */,
 				B48375C729D5BA8500451787 /* Rubik-Medium.ttf in Resources */,
 				B48375C829D5BA8500451787 /* Rubik-ExtraBold.ttf in Resources */,
+				B48375EB29D6FEA900451787 /* OnboardingTwoCVC.xib in Resources */,
+				B48375F629D7308F00451787 /* PayWallCVC.xib in Resources */,
 				B48375CC29D5BA8500451787 /* Rubik-Regular.ttf in Resources */,
 				B48375CA29D5BA8500451787 /* Rubik-Black.ttf in Resources */,
 				B483758D29D5AEE800451787 /* Assets.xcassets in Resources */,
 				B48375CF29D5BA8500451787 /* Rubik-Bold.ttf in Resources */,
 				B48375C929D5BA8500451787 /* Rubik-SemiBold.ttf in Resources */,
+				B48375E429D5DF9F00451787 /* OnboardingCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,17 +379,23 @@
 				B483758429D5AEE800451787 /* AppDelegate.swift in Sources */,
 				B48375A629D5B63B00451787 /* NetworkManager.swift in Sources */,
 				B48375D329D5BD0D00451787 /* UIFont + Extension.swift in Sources */,
+				B48375F829D7321700451787 /* UICollectionViewCell + Extension.swift in Sources */,
 				B48375AC29D5B68700451787 /* UIViewController+Extensions.swift in Sources */,
 				B48375A429D5B40A00451787 /* GetStartedViewController.swift in Sources */,
 				B483758629D5AEE800451787 /* SceneDelegate.swift in Sources */,
 				B48375DC29D5BF1800451787 /* CustomColors.swift in Sources */,
+				B48375EA29D6FEA900451787 /* OnboardingTwoCVC.swift in Sources */,
 				B48375DA29D5BE8400451787 /* UIColor + Extension.swift in Sources */,
 				B483759D29D5B0E100451787 /* BaseVC.swift in Sources */,
 				B48375B229D5B91100451787 /* OnboardingViewController.swift in Sources */,
 				B48375D629D5BD6E00451787 /* AppConstants.swift in Sources */,
+				B48375F529D7308F00451787 /* PayWallCVC.swift in Sources */,
+				B48375F129D72BD500451787 /* PayWallPriceView.swift in Sources */,
 				B48375DE29D5C47600451787 /* String + Extension.swift in Sources */,
 				B48375AA29D5B65F00451787 /* SafeUnwrap.swift in Sources */,
 				B48375B429D5B92900451787 /* HomeViewController.swift in Sources */,
+				B48375EE29D71AF400451787 /* PayWallViewController.swift in Sources */,
+				B48375E329D5DF9F00451787 /* OnboardingCVC.swift in Sources */,
 				B48375D829D5BD8200451787 /* FontBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

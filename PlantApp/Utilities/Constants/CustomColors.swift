@@ -13,4 +13,5 @@ struct CustomColors {
     static let labelColor = UIColor(rgb: 0x13231B)
     static let buttonColor = UIColor(rgb: 0x28AF6E)
     static let contratsColor = UIColor(rgb: 0x597165)
+    static let payWallBGColor = UIColor(rgb: 0x101E17)
 }

@@ -15,16 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        currentScene = windowScene
-        self.setRootViewController(GetStartedViewController())
-    }
-
-    // MARK: - SETUP ROOT VC
-    func setRootViewController(_ viewController: UIViewController) {
-
-        guard let scene = (currentScene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = viewController
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = GetStartedViewController()
         window?.makeKeyAndVisible()
     }
 

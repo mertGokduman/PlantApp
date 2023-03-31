@@ -143,7 +143,7 @@ class GetStartedViewController: UIViewController {
     // MARK: - GET STARTED BUTTON TARGET
     @objc private func btnGetStartedTapped() {
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-            sceneDelegate.setRootViewController(OnboardingViewController())
+            sceneDelegate.window?.rootViewController = OnboardingViewController()
         }
     }
 }
