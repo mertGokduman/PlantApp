@@ -36,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQc-UE-SfY" customClass="GradientLabel" customModule="PlantApp" customModuleProvider="target">
-                                <rect key="frame" x="76" y="13" width="221" height="21"/>
+                                <rect key="frame" x="76" y="13" width="236" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8I7-ag-pI9"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-Wb-Ycz" customClass="GradientLabel" customModule="PlantApp" customModuleProvider="target">
-                                <rect key="frame" x="76" y="35" width="270" height="16"/>
+                                <rect key="frame" x="76" y="35" width="236" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,14 +54,14 @@
                         <color key="backgroundColor" red="0.14117647058823529" green="0.12549019607843137" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="5uh-Wb-Ycz" secondAttribute="bottom" constant="13" id="BE7-EA-cQU"/>
-                            <constraint firstAttribute="trailing" secondItem="5uh-Wb-Ycz" secondAttribute="trailing" constant="20" id="BTi-By-X33"/>
                             <constraint firstItem="Que-m1-aPi" firstAttribute="leading" secondItem="FZX-1a-nar" secondAttribute="leading" constant="20" id="DgP-dR-zdP"/>
                             <constraint firstItem="Que-m1-aPi" firstAttribute="centerY" secondItem="FZX-1a-nar" secondAttribute="centerY" id="JeJ-1K-I9p"/>
                             <constraint firstItem="jQc-UE-SfY" firstAttribute="leading" secondItem="Que-m1-aPi" secondAttribute="trailing" constant="20" id="KZf-zY-Rxu"/>
-                            <constraint firstItem="qUS-if-wIj" firstAttribute="leading" secondItem="jQc-UE-SfY" secondAttribute="trailing" constant="20" id="TJD-38-3z7"/>
+                            <constraint firstItem="qUS-if-wIj" firstAttribute="leading" secondItem="jQc-UE-SfY" secondAttribute="trailing" constant="5" id="TJD-38-3z7"/>
                             <constraint firstItem="qUS-if-wIj" firstAttribute="centerY" secondItem="FZX-1a-nar" secondAttribute="centerY" id="cZx-aX-DY2"/>
                             <constraint firstItem="5uh-Wb-Ycz" firstAttribute="top" secondItem="jQc-UE-SfY" secondAttribute="bottom" constant="1" id="hL2-Dd-BdX"/>
                             <constraint firstItem="5uh-Wb-Ycz" firstAttribute="leading" secondItem="Que-m1-aPi" secondAttribute="trailing" constant="20" id="qBU-Ji-WaW"/>
+                            <constraint firstItem="qUS-if-wIj" firstAttribute="leading" secondItem="5uh-Wb-Ycz" secondAttribute="trailing" constant="5" id="tSd-mJ-YyI"/>
                             <constraint firstAttribute="trailing" secondItem="qUS-if-wIj" secondAttribute="trailing" constant="25" id="wLd-LI-ZEq"/>
                             <constraint firstItem="jQc-UE-SfY" firstAttribute="top" secondItem="FZX-1a-nar" secondAttribute="top" constant="13" id="zd3-OP-AYF"/>
                         </constraints>

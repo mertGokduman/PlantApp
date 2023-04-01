@@ -8,5 +8,6 @@
 import Foundation
 
 struct AppConstans {
-    
+
+    static let onboardingUserDefaultsKey = "Onboarding"
 }

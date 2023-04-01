@@ -25,12 +25,19 @@ class CategoriesCVC: UICollectionViewCell {
         }
     }
 
+    lazy var dataArray: [Category] = []
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    func fillCell(with model: [Category]) {
+        self.dataArray = model
+        self.collectionView.reloadData()
     }
 
     override func prepareForReuse() {
@@ -43,13 +50,14 @@ extension CategoriesCVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.dataArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCVC",
                                                             for: indexPath) as? CategoryCVC else { return UICollectionViewCell() }
+        cell.fillCell(with: self.dataArray[indexPath.row])
         return cell
     }
 }

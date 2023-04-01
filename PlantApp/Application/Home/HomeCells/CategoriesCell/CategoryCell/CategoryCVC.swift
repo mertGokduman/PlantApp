@@ -31,6 +31,14 @@ class CategoryCVC: UICollectionViewCell {
         lblTitle.text = "Edible\nPlants"
     }
 
+    func fillCell(with model: Category) {
+        lblTitle.text = model.title
+        if let urlString = model.image?.url,
+           let imageUrl = URL(string: urlString) {
+            imgBG.kf.setImage(with: imageUrl)
+        }
+    }
+
     override func prepareForReuse() {
         super.prepareForReuse()
     }

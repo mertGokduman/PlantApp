@@ -21,4 +21,5 @@ struct CustomColors {
     static let categoryCellBorderColor = UIColor(rgb: 0x29BB892E)
     static let searchBorderColor = UIColor(rgb: 0x3C3C4340)
     static let searchIconColor = UIColor(rgb: 0xABABAB)
+    static let tabbarUnselectedColor = UIColor(rgb: 0x979798)
 }

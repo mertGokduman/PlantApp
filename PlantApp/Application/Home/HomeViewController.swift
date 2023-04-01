@@ -37,10 +37,36 @@ class HomeViewController: UIViewController {
         return collectionView
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.getQuestions()
+        viewModel.getCategories()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        bind()
+    }
+
+    // MARK: - BIND VIEWMODEL DATAS
+    private func bind() {
+
+        viewModel.questions.bind { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+
+        viewModel.categories.bind { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 
     // MARK: - SETUP UI
@@ -86,6 +112,14 @@ class HomeViewController: UIViewController {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: "HomeHeader")
     }
+
+    // MARK: - ROUTE FUNCTION
+    private func routeToPayWall() {
+        let vc = PayWallViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.isComeFromHome = true
+        self.present(vc, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -119,10 +153,13 @@ extension HomeViewController: UICollectionViewDataSource {
         case .getStarted:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetStartedCVC",
                                                                 for: indexPath) as? GetStartedCVC else { return UICollectionViewCell() }
+            cell.fillCell(with: viewModel.questions.value)
+            cell.delegate = self
             return cell
         case .categories:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCVC",
                                                                 for: indexPath) as? CategoriesCVC else { return UICollectionViewCell() }
+            cell.fillCell(with: viewModel.categories.value ?? [])
             return cell
         }
     }
@@ -131,9 +168,21 @@ extension HomeViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
 
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        let section = viewModel.typeArray[indexPath.section]
+        switch section {
+        case .premium:
+            self.routeToPayWall()
+        default:
+            break
+        }
+    }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -146,9 +195,42 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: getScreenSize().width,
                           height: 224)
         case .categories:
-            let height = CGFloat(3 * 152) + 20
             return CGSize(width: getScreenSize().width,
-                          height: height)
+                          height: calculateCategoryCollectionHeight())
         }
+    }
+
+    private func calculateCategoryCollectionHeight() -> CGFloat {
+        guard let count = viewModel.categories.value?.count else { return 0 }
+        let rowCount = count / 2
+        var height: CGFloat = 0
+        if count != 0 && count % 2 == 0 {
+            height = CGFloat((rowCount * 152) + ((rowCount - 1) * 10))
+        } else {
+            height = CGFloat(((rowCount + 1) * 152) + (rowCount * 10))
+        }
+        return height
+    }
+}
+
+// MARK: - GetStartedDelegate
+extension HomeViewController: GetStartedDelegate {
+
+    func cellTapped(url: String?) {
+        guard let url = url else { return }
+        let vc = WebViewController()
+        vc.urlString = url
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
+    }
+}
+
+// MARK: - TabBarItemable
+extension HomeViewController: TabBarItemable {
+    var tabItem: TabItem {
+        return TabItem(title: "Home",
+                       image: UIImage(named: "home")?.withRenderingMode(.alwaysTemplate),
+                       selectedImage: UIImage(named: "home")?.withRenderingMode(.alwaysTemplate),
+                       isEnable: true)
     }
 }

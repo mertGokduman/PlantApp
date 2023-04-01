@@ -16,8 +16,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = GetStartedViewController()
+
+        window?.rootViewController = setupRootVC()
         window?.makeKeyAndVisible()
+    }
+
+    private func setupRootVC() -> UIViewController {
+        let isFirstTimeOpen = UserDefaults.standard.bool(forKey: AppConstans.onboardingUserDefaultsKey)
+
+        if !isFirstTimeOpen {
+            return GetStartedViewController()
+        } else {
+            let tabChilds = [HomeViewController(),
+                             DiagnoseViewController(),
+                             ScanViewController(),
+                             MyGardenViewController(),
+                             ProfileViewController()]
+            let tabControllers = tabChilds.map { UINavigationController(rootViewController: $0) }
+            let vc = BaseTabbarController(tabChildren: tabControllers)
+            return vc
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

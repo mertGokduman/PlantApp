@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class QuestionCVC: UICollectionViewCell {
 
@@ -29,17 +30,16 @@ class QuestionCVC: UICollectionViewCell {
         self.contentView.layer.cornerRadius = 12
         self.contentView.clipsToBounds = true
 
-        imgBG.contentMode = .scaleAspectFill
-        imgBG.image = UIImage(named: "payWallBG")
-
         blurView.createBlurBackgroundView()
         blurView.bringSubviewToFront(lblTitle)
-        let text = "How to identify plants easily with PlantApp?"
-        lblTitle.attributedText = text.setAttributedString(range: "How to identify",
-                                                           font: .custom(.rubikMedium, 15),
-                                                           textColor: .white,
-                                                           rangeColor: .white,
-                                                           rangeFont: .custom(.rubikRegular, 15))
+    }
+
+    func fillCell(with model: GetStartedResponseModel) {
+        lblTitle.text = model.title
+        if let urlString = model.imageUrl,
+           let imageUrl = URL(string: urlString) {
+            imgBG.kf.setImage(with: imageUrl)
+        }
     }
 
     override func prepareForReuse() {
