@@ -15,6 +15,21 @@ struct PayModel {
 
 class PayWallViewController: UIViewController {
 
+    private let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.backgroundColor = .clear
+        scroll.bounces = false
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        return scroll
+    }()
+
+    private let mainView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     private lazy var btnClose: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "Close"),
@@ -154,11 +169,28 @@ class PayWallViewController: UIViewController {
 
         view.backgroundColor = CustomColors.payWallBGColor
 
-        view.addSubview(imgTop)
+        view.addSubview(scrollView)
         NSLayoutConstraint.activate([
-            imgTop.topAnchor.constraint(equalTo: view.topAnchor),
-            imgTop.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imgTop.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        scrollView.addSubview(mainView)
+        NSLayoutConstraint.activate([
+            mainView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            mainView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            mainView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            mainView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            mainView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+
+        mainView.addSubview(imgTop)
+        NSLayoutConstraint.activate([
+            imgTop.topAnchor.constraint(equalTo: mainView.topAnchor),
+            imgTop.leadingAnchor.constraint(equalTo: mainView.leadingAnchor),
+            imgTop.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
             imgTop.heightAnchor.constraint(equalTo: imgTop.widthAnchor, multiplier: 490/375)
         ])
 
@@ -166,10 +198,10 @@ class PayWallViewController: UIViewController {
         btnClose.addTarget(self,
                            action: #selector(btnCloseTapped),
                            for: .touchUpInside)
-        view.addSubview(btnClose)
+        mainView.addSubview(btnClose)
         NSLayoutConstraint.activate([
-            btnClose.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            btnClose.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            btnClose.topAnchor.constraint(equalTo: mainView.safeAreaLayoutGuide.topAnchor),
+            btnClose.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -16),
             btnClose.heightAnchor.constraint(equalToConstant: 48),
             btnClose.widthAnchor.constraint(equalToConstant: 48)
         ])
@@ -180,15 +212,15 @@ class PayWallViewController: UIViewController {
                                                                 textColor: .white,
                                                                 rangeColor: .white,
                                                                 rangeFont: .custom(.rubikExtraBold, 24))
-        view.addSubview(lblTitle)
+        mainView.addSubview(lblTitle)
         NSLayoutConstraint.activate([
-            lblTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 220),
-            lblTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            lblTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            lblTitle.topAnchor.constraint(equalTo: mainView.safeAreaLayoutGuide.topAnchor, constant: 220),
+            lblTitle.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24),
+            lblTitle.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             lblTitle.heightAnchor.constraint(equalToConstant: 47)
         ])
 
-        view.addSubview(lblDescription)
+        mainView.addSubview(lblDescription)
         NSLayoutConstraint.activate([
             lblDescription.topAnchor.constraint(equalTo: lblTitle.bottomAnchor),
             lblDescription.leadingAnchor.constraint(equalTo: lblTitle.leadingAnchor),
@@ -197,19 +229,19 @@ class PayWallViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        view.addSubview(collectionView)
+        mainView.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: lblDescription.bottomAnchor, constant: 20),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: 130)
         ])
 
-        view.addSubview(priceStack)
+        mainView.addSubview(priceStack)
         NSLayoutConstraint.activate([
             priceStack.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 24),
-            priceStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            priceStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            priceStack.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24),
+            priceStack.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             priceStack.heightAnchor.constraint(equalToConstant: 136)
         ])
 
@@ -229,7 +261,7 @@ class PayWallViewController: UIViewController {
         priceStack.addArrangedSubview(oneYearView)
         oneYearView.selecView()
 
-        view.addSubview(btnTryFree)
+        mainView.addSubview(btnTryFree)
         NSLayoutConstraint.activate([
             btnTryFree.topAnchor.constraint(equalTo: priceStack.bottomAnchor, constant: 26),
             btnTryFree.leadingAnchor.constraint(equalTo: priceStack.leadingAnchor),
@@ -237,19 +269,19 @@ class PayWallViewController: UIViewController {
             btnTryFree.heightAnchor.constraint(equalTo: btnTryFree.widthAnchor, multiplier: 52/327)
         ])
 
-        view.addSubview(lblPriceDescription)
+        mainView.addSubview(lblPriceDescription)
         NSLayoutConstraint.activate([
             lblPriceDescription.topAnchor.constraint(equalTo: btnTryFree.bottomAnchor, constant: 8),
             lblPriceDescription.leadingAnchor.constraint(equalTo: btnTryFree.leadingAnchor),
             lblPriceDescription.trailingAnchor.constraint(equalTo: btnTryFree.trailingAnchor)
         ])
 
-        view.addSubview(lblContrats)
+        mainView.addSubview(lblContrats)
         NSLayoutConstraint.activate([
             lblContrats.topAnchor.constraint(equalTo: lblPriceDescription.bottomAnchor, constant: 10),
             lblContrats.leadingAnchor.constraint(equalTo: lblPriceDescription.leadingAnchor),
             lblContrats.trailingAnchor.constraint(equalTo: lblPriceDescription.trailingAnchor),
-            lblContrats.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            lblContrats.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -20)
         ])
     }
 

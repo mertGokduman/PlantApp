@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GetStartedCVC" id="gTV-IL-0wX" customClass="GetStartedCVC" customModule="PlantApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlO-kE-WhE">
+                        <rect key="frame" x="24" y="0.0" width="366" height="18"/>
+                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                        <color key="textColor" red="0.074509803920000006" green="0.13725490200000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hKs-4d-1nW">
+                        <rect key="frame" x="0.0" y="34" width="414" height="166"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ru9-P4-aZS">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SlO-kE-WhE" secondAttribute="trailing" constant="24" id="8nd-df-IgS"/>
+                <constraint firstAttribute="bottom" secondItem="hKs-4d-1nW" secondAttribute="bottom" constant="24" id="RB1-wa-Ipt"/>
+                <constraint firstItem="hKs-4d-1nW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SD7-Gu-gKA"/>
+                <constraint firstItem="SlO-kE-WhE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="c0f-yF-FSb"/>
+                <constraint firstItem="hKs-4d-1nW" firstAttribute="top" secondItem="SlO-kE-WhE" secondAttribute="bottom" constant="16" id="itd-ea-MFy"/>
+                <constraint firstAttribute="trailing" secondItem="hKs-4d-1nW" secondAttribute="trailing" id="oxr-lc-UgI"/>
+                <constraint firstItem="SlO-kE-WhE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wJW-6H-nvF"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="hKs-4d-1nW" id="dU9-9n-Nwc"/>
+                <outlet property="collectionViewFlowLayout" destination="ru9-P4-aZS" id="IJS-MF-j69"/>
+                <outlet property="lblTitle" destination="SlO-kE-WhE" id="7CB-qp-ST6"/>
+            </connections>
+            <point key="canvasLocation" x="90" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

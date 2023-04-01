@@ -10,6 +10,21 @@ import UIKit
 
 extension String {
 
+    func withBoldText(text: String,
+                      font: UIFont,
+                      rangeFont: UIFont) -> NSAttributedString {
+        let fullString = NSMutableAttributedString(string: self,
+                                                   attributes: [
+                                                    NSAttributedString.Key.font: font
+                                                   ])
+        let boldFontAttribute: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: rangeFont
+        ]
+        let range = (self as NSString).range(of: text)
+        fullString.addAttributes(boldFontAttribute, range: range)
+        return fullString
+    }
+
     func setAttributedString(range: String,
                              secondRange: String? = nil,
                              font: UIFont,
